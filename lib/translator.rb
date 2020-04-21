@@ -12,7 +12,7 @@ def get_japanese_emoticon(file, icon)
    hash.each_pair do |meaning, languages|
     languages.each_pair do |emote|
       if icon == emote[1]
-        return languages
+        return languages[:japanese]
       end
     end
   end
