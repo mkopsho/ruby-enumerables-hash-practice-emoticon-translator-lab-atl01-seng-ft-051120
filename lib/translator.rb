@@ -12,11 +12,11 @@ def get_japanese_emoticon(file, icon)
   hash.each_pair do |meaning, languages| # Use each_pair enumerable to give us access to the first nested hash that we just made.
     languages.each_pair do |emote| # Use each_pair enumerable to give us access to the arrays of emoticons.
       if icon == emote[1]
-        return languages[:japanese] # If the icon variable matches the second emote in the array
+        return languages[:japanese] # If the icon variable matches the second emote in the array, return the equivalent Japanese emote.
       end
     end
   end
-  return "Sorry, that emoticon was not found"
+  return "Sorry, that emoticon was not found" # If nothing returned,
 end
 
 def get_english_meaning(file, icon)
