@@ -18,6 +18,9 @@ def get_english_meaning(file, icon)
       if icon == emote[1]
         return meaning
       end
+      if icon != emote[1]
+        return "agh!"
+      end
     end
   end
 end
