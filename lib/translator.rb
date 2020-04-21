@@ -19,10 +19,5 @@ def get_english_meaning(file, icon)
         return meaning
       end
     end
-    languages.each_pair do |emote|
-      if icon != emote[1]
-        return "Sorry!"
-      end
-    end
   end
 end
