@@ -7,9 +7,16 @@ def load_library(file)
   end
 end
 
-# def get_japanese_emoticon(file, icon)
-#   load_library(file)
-# end
+def get_japanese_emoticon(file, icon)
+   hash = load_library(file)
+   hash.each_pair do |meaning, languages|
+    languages.each_pair do |emote|
+      if icon == emote[1]
+        return meaning
+      end
+    end
+  end
+ end
 
 def get_english_meaning(file, icon)
   hash = load_library(file)
