@@ -15,7 +15,9 @@ def get_english_meaning(file, icon)
   hash = load_library(file)
   hash.each_pair do |meaning, languages|
     this = languages.each_pair do |emote|
-      if !this.has
+      if !this.include?(emote)
+        return "Hi!"
+      end
     end
   end
 end
