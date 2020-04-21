@@ -9,7 +9,7 @@ end
 
 def get_japanese_emoticon(file, icon)
   hash = load_library(file) # Use our previous method to load the yaml file
-  hash.each_pair do |meaning, languages| # 
+  hash.each_pair do |meaning, languages| # Use each_pair enumerable to give us access to 
     languages.each_pair do |emote|
       if icon == emote[1]
         return languages[:japanese]
